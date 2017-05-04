@@ -65,8 +65,8 @@ namespace clientcertificatetest
                     CertificateWebClient myWebClient = new CertificateWebClient(certCollection[0]);
                     string response = myWebClient.DownloadString(webAppUrl);
 
-                    Console.WriteLine("Response recieved from call to URL {0}", response);
-                    Console.WriteLine(response);
+                    Console.WriteLine("Response received from call to URL {0}", webAppUrl);
+                    Console.WriteLine(response.Replace("<br/>", Environment.NewLine));
                 }
                 
             }
