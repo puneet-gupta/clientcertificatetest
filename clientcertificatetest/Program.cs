@@ -36,6 +36,8 @@ namespace clientcertificatetest
     {
         static void Main(string[] args)
         {
+            System.Net.ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+
             if (args.Length !=2)
             {
                 Console.WriteLine("Please pass the URL of the Azure WebApp that you want to call");
